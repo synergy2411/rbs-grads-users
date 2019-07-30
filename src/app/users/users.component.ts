@@ -6,6 +6,7 @@ import { IUser} from '../model/user';
   templateUrl: './users.component.html'
 })
 export class UsersComponent {
+
   user : IUser = {
     firstName : "Bill",
     lastName : "Gates",

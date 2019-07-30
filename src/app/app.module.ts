@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
+import { UserImageComponent } from './users/user-image/user-image.component';
+import { UserInfoComponent } from './users/user-info/user-info.component';
 
 @NgModule({
   declarations: [
-    AppComponent, UsersComponent
+    AppComponent, UsersComponent, UserImageComponent, UserInfoComponent
   ],
   imports: [
     BrowserModule,
