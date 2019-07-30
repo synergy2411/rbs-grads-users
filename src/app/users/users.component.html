@@ -1,0 +1,46 @@
+<div class="container">
+  <ul class="list-unstyled">
+    <li class="card">
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-3">
+          <img [src]="user.image" class="img-fluid rounded-circle">
+          <br>
+          <button class="btn btn-info btn-block" (click)="moreInfo(user)">
+            More Info
+          </button>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-9">
+          <!-- Angular Expression for data binding -->
+          <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+          <p>Date of Birth : {{ user.dob }}</p>
+          <!-- Property Binding Syntax -->
+          <p>Income : <span [innerHTML]="user.income"></span> </p>
+
+          <!-- Two-way binding -->
+          <p>
+            Total Votes : {{ user.vote }}
+            <input type="number"
+              [value]="user.vote"
+              (change) = "user.vote = $event.target.value">
+            <input type="number" [(ngModel)] = "user.vote">
+            </p>
+
+
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<!-- <div class="card" style="width: 18rem;">
+  <img [src]="user.image" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{ user.firstName }} {{ user.lastName }}</h5>
+    <p class="card-text">
+      <em>Income : <span [innerHTML]="user.income"></span> </em>
+      <em>Date of Birth : {{ user.dob }}</em>
+    </p>
+
+  </div>
+</div> -->
