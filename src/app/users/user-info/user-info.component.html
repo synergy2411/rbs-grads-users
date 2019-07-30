@@ -1,8 +1,9 @@
 <!-- Angular Expression for data binding -->
 <h2>{{ user.firstName }} {{ user.lastName }}</h2>
-<p>Date of Birth : {{ user.dob }}</p>
+<p [ngClass]="dynamicClasses">Date of Birth : {{ user.dob }}</p>
+<button (click)="onToggle()">Toggle Class</button>
 <!-- Property Binding Syntax -->
-<p>Income : <span [innerHTML]="user.income"></span> </p>
+<p *ngIf="user.isWorking">Income : <span [innerHTML]="user.income"></span> </p>
 
 <!-- Two-way binding -->
 <p>

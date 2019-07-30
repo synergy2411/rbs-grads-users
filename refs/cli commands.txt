@@ -1,0 +1,12 @@
+> npm install -g @angular/cli@6
+
+> ng --version
+
+> ng new users-app
+
+> cd users-app
+
+> ng serve --open
+
+> ng generate component users/<comp_name>
+	> ng g c <comp_name>

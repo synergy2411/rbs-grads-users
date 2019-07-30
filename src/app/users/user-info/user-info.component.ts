@@ -21,6 +21,15 @@ export class UserInfoComponent implements
 
   @Input('user') user : IUser;
 
+  dynamicClasses = {
+    border : true,
+    feature : false
+  }
+
+  onToggle(){
+    this.dynamicClasses.border = !this.dynamicClasses.border;
+    this.dynamicClasses.feature = !this.dynamicClasses.feature;
+  }
   ngOnChanges(){console.log("ngOnChanges")}
   ngOnInit(){console.log("ngOnInit")}
   ngDoCheck(){console.log("ngDoCheck")}
