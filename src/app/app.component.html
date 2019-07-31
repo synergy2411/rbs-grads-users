@@ -1,14 +1,39 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Users App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li>
+          <a class="nav-link" [routerLink]="['login']">Login <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['register']">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['users']">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"[routerLink]="['pipes']">Pipes</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<hr>
+
 <div style="text-align:center">
   <h1>
     Hello Angular!
   </h1>
 
-
-
 </div>
 
 <div class="container">
+
+  <router-outlet></router-outlet>
 
   <!-- <app-pipe-demo></app-pipe-demo> -->
 
@@ -16,6 +41,6 @@
 
   <!-- <app-login></app-login> -->
 
-  <app-users></app-users>
+  <!-- <app-users></app-users> -->
 </div>
 
