@@ -1,9 +1,9 @@
 <!-- Angular Expression for data binding -->
-<h2>{{ user.firstName }} {{ user.lastName }}</h2>
-<p [ngClass]="dynamicClasses">Date of Birth : {{ user.dob }}</p>
+<h2>{{ user.firstName | uppercase}} {{ user.lastName }}</h2>
+<p [ngClass]="dynamicClasses">Date of Birth : {{ user.dob | date : 'MMM/dd/yyyy'}}</p>
 <button (click)="onToggle()">Toggle Class</button>
 <!-- Property Binding Syntax -->
-<p *ngIf="user.isWorking">Income : <span [innerHTML]="user.income"></span> </p>
+<p *ngIf="user.isWorking">Income : <span [innerHTML]="user.income | currency : 'EUR'"></span> </p>
 
 <!-- Two-way binding -->
 <p>
@@ -11,3 +11,6 @@
   <input type="number" [value]="user.vote" (change)="user.vote = $event.target.value">
   <input type="number" [(ngModel)]="user.vote">
 </p>
+
+
+{{ user | json}}
